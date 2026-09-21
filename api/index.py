@@ -53,9 +53,8 @@ def get_chain():
             ("system", SYSTEM_TEMPLATE),
             MessagesPlaceholder("history"),
             ("human", "{message}"),
-        ],
-        partial_variables={"knowledge": load_knowledge()},
-    )
+        ]
+    ).partial(knowledge=load_knowledge())
 
     return prompt | llm | StrOutputParser()
 
