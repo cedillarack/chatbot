@@ -1,9 +1,19 @@
-# chatbot
+# Chatbot
 
 A minimal chatbot that answers questions about **Nishitha Degree College**
 (Nizamabad) using only the content of a Markdown knowledge base file scraped
 from [nishitha.org](https://nishitha.org). Built with FastAPI, LangChain, and
 OpenRouter, deployed on Vercel.
+
+Presented by Vaishnavi, Sri Gowrika, Rajasri, and Shivaraj.
+
+## UI features
+
+- Dark / light theme toggle (persisted in `localStorage`, follows system preference by default)
+- Responsive layout for desktop and mobile (`100dvh`, safe-area insets)
+- Info dialog with project and team credits
+- Conversation history capped at the last 20 entries (10 exchanges) to keep
+  token usage and latency flat across long sessions
 
 ## Why Markdown for the knowledge base
 

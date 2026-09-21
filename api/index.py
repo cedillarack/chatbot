@@ -20,7 +20,7 @@ KNOWLEDGE_FILE = ROOT / "knowledge" / "data.md"
 PUBLIC_DIR = ROOT / "public"
 
 SYSTEM_TEMPLATE = (
-    "You are chatbot, a helpful assistant. Answer the user's questions using ONLY "
+    "You are Chatbot, a helpful assistant. Answer the user's questions using ONLY "
     "the knowledge base below. If the answer is not in the knowledge base, say you "
     "don't know. Be concise.\n\n"
     "<knowledge_base>\n"
@@ -74,7 +74,7 @@ class ChatResponse(BaseModel):
     reply: str
 
 
-app = FastAPI(title="chatbot")
+app = FastAPI(title="Chatbot")
 
 app.add_middleware(
     CORSMiddleware,
