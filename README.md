@@ -7,6 +7,20 @@ OpenRouter, deployed on Vercel.
 
 Presented by Vaishnavi, Sri Gowrika, Rajasri, and Shivaraj.
 
+## Project & team
+
+- **Project name:** Chatbot
+- **Team members:**
+  - Vaishnavi
+  - Sri Gowrika
+  - Rajasri
+  - Shivaraj
+- **Purpose:** A web chatbot that answers questions about Nishitha Degree
+  College (Nizamabad) from a curated knowledge base, so users get instant,
+  accurate answers without browsing the college website.
+- **Tech stack:** HTML/CSS/JS frontend, Python + FastAPI + LangChain backend,
+  OpenRouter LLM API, Vercel hosting.
+
 ## UI features
 
 - Dark / light theme toggle (persisted in `localStorage`, follows system preference by default)
