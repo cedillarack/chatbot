@@ -42,7 +42,7 @@ def get_chain():
         raise RuntimeError("OPENROUTER_API_KEY is not set")
 
     llm = ChatOpenAI(
-        model=os.getenv("OPENROUTER_MODEL", "z-ai/glm-5.2:free"),
+        model=os.getenv("OPENROUTER_MODEL", "openrouter/free"),
         api_key=api_key,
         base_url="https://openrouter.ai/api/v1",
         temperature=0.3,

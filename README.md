@@ -107,7 +107,7 @@ vercel --prod
 | Variable              | Required | Default                | Description            |
 | --------------------- | -------- | ---------------------- | ---------------------- |
 | `OPENROUTER_API_KEY`  | yes      | —                      | OpenRouter API key     |
-| `OPENROUTER_MODEL`    | no       | `z-ai/glm-5.2:free`    | Any OpenRouter model ID |
+| `OPENROUTER_MODEL`    | no       | `openrouter/free`      | Any OpenRouter model ID |
 
 ## Endpoints
 
