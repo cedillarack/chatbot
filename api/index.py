@@ -104,4 +104,5 @@ def chat(req: ChatRequest) -> ChatResponse:
     return ChatResponse(reply=reply)
 
 
-app.mount("/", StaticFiles(directory=PUBLIC_DIR, html=True), name="static")
+if PUBLIC_DIR.exists():
+    app.mount("/", StaticFiles(directory=PUBLIC_DIR, html=True), name="static")
