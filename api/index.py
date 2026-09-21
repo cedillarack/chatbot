@@ -99,7 +99,10 @@ def chat(req: ChatRequest) -> ChatResponse:
         HumanMessage(content=m.content) if m.role == "user" else AIMessage(content=m.content)
         for m in req.history[-20:]
     ]
-    reply = chain.invoke({"message": req.message, "history": history})
+    try:
+        reply = chain.invoke({"message": req.message, "history": history})
+    except Exception:
+        raise HTTPException(status_code=503, detail="Model is busy right now. Please try again in a few seconds.")
     return ChatResponse(reply=reply)
 
 
