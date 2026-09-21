@@ -77,9 +77,9 @@ app = FastAPI(title="Chatbot")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origin_regex=r"^https://.*\.vercel\.app$|^http://(localhost|127\.0\.0\.1)(:\d+)?$",
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type"],
 )
 
 
@@ -97,7 +97,7 @@ def chat(req: ChatRequest) -> ChatResponse:
 
     history = [
         HumanMessage(content=m.content) if m.role == "user" else AIMessage(content=m.content)
-        for m in req.history
+        for m in req.history[-20:]
     ]
     reply = chain.invoke({"message": req.message, "history": history})
     return ChatResponse(reply=reply)
